@@ -63,6 +63,13 @@ class SendWebhookSubscriber extends CommonSubscriber
             'description' => 'mautic.plugin.webhook.event.sendwebhook_desc.response',
             'formType'    => CampaignEventSendWebhookResponseType::class,
             'eventName'   => WebhookEvents::ON_CAMPAIGN_TRIGGER_DECISION,
+            'connectionRestrictions' => [
+                'source' => [
+                    'action' => [
+                        'campaign.sendwebhook',
+                    ],
+                ],
+            ],
         ];
         $event->addDecision('plugin.webhook.response', $sendWebhookDecision);
     }
