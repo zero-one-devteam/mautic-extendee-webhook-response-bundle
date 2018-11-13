@@ -11,14 +11,13 @@
 
 namespace MauticPlugin\MauticExtendeeWebhookResponseBundle\EventListener;
 
-use Joomla\Http\Http;
 use Mautic\CampaignBundle\CampaignEvents;
 use Mautic\CampaignBundle\Event as Events;
 use Mautic\CampaignBundle\Event\CampaignExecutionEvent;
 use Mautic\CampaignBundle\Executioner\RealTimeExecutioner;
 use Mautic\CoreBundle\EventListener\CommonSubscriber;
 use Mautic\WebhookBundle\Event\SendWebhookEvent;
-use Mautic\WebhookBundle\Form\Type\CampaignEventSendWebhookResponseType;
+use MauticPlugin\MauticExtendeeWebhookResponseBundle\Form\Type\CampaignEventSendWebhookResponseType;
 use MauticPlugin\MauticExtendeeWebhookResponseBundle\WebhookEvents;
 
 class SendWebhookSubscriber extends CommonSubscriber
