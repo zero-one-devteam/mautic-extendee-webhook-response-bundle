@@ -44,7 +44,7 @@ class SendWebhookSubscriber extends CommonSubscriber
     {
         return [
             CampaignEvents::CAMPAIGN_ON_BUILD           => ['onCampaignBuild', 0],
-            \Mautic\WebhookBundle\WebhookEvents::ON_SEND_WEBHOOK => ['onSendWebhook', 0],
+            \Mautic\WebhookBundle\WebhookEvents::ON_WEBHOOK_RESPONSE => ['onSendWebhook', 0],
             WebhookEvents::ON_CAMPAIGN_TRIGGER_DECISION => ['onCampaignTriggerDecision', 0],
         ];
     }
